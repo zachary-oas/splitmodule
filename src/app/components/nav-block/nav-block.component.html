@@ -1,0 +1,18 @@
+<button class="material-icons trigger-btn">games</button>
+<div class="nav-block">
+  <button (click)="transformSize(config.right.action)"
+          [disabled]="config.right.disabled"
+          class="material-icons nav-btn">chevron_right</button>
+  <button (click)="transformSize(config.left.action)"
+          [disabled]="config.left.disabled"
+          class="material-icons nav-btn">chevron_left</button>
+  <button (click)="transformSize(config.up.action)"
+          [disabled]="config.up.disabled"
+          class="material-icons nav-btn">expand_less</button>
+  <button (click)="transformSize(config.down.action)"
+          [disabled]="config.down.disabled"
+          class="material-icons nav-btn">expand_more</button>
+  <button (click)="transformSize(config.default.action)"
+          [disabled]="config.default.disabled"
+          class="material-icons nav-btn small">brightness_1</button>
+</div>

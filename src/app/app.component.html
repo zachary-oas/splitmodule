@@ -1,0 +1,32 @@
+<app-content class="content-main"
+             onclick="void(0)"
+             [navConfig]="mainConfig"
+             (sizeChange)="changeSideWidth($event)">
+  Main content
+</app-content>
+
+<div class="content-side" #contentSide>
+  <app-sidenav-content-top [navConfig]="sideNavConfig"
+                           onclick="void(0)"
+                           [self]="false"
+                           (heightChanged)="onMapSizeChanged()"
+                           (sizeChange)="changeSideWidth($event)">
+    <div leaflet
+         style="height: 100%; width: 100%"
+         [leafletOptions]="options"
+         (leafletMapReady)="map1Ready($event)">
+    </div>
+  </app-sidenav-content-top>
+
+  <app-sidenav-content-bottom [navConfig]="sideNavConfig1"
+                              onclick="void(0)"
+                              [self]="false"
+                              (heightChanged)="onMapSizeChanged()"
+                              (sizeChange)="changeSideWidth($event)">
+    <div leaflet
+         style="height: 100%; width: 100%"
+         [leafletOptions]="options1"
+         (leafletMapReady)="map2Ready($event)">
+    </div>
+  </app-sidenav-content-bottom>
+</div>
